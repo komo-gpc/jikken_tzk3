@@ -32,6 +32,7 @@ int main()
 	for(;;)
 	{
 		printf("token[%d] : ",tnum);
+		fflush(stdout);
 		scanf("%c",&c);
 		scanf("%c",&d);
 		/*終了判定*/
@@ -179,6 +180,7 @@ int comp_token(char t,char s)
 			tn=1;
 			break;
 		case ')':
+		case '$':
 			tn=0;
 			break;
 		default:
@@ -200,6 +202,7 @@ int comp_token(char t,char s)
 			sn=1;
 			break;
 		case ')':
+		case '$':
 			sn=0;
 			break;
 		default:
